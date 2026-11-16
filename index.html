@@ -373,7 +373,7 @@ footer.colophon::before{content:"";display:block;height:5px;background:linear-gr
             <div class="photo-fallback" id="photoFallback" aria-hidden="true"></div>
           </div>
           <figcaption>Екатерина · это я</figcaption>
-          <p class="photo-hint">✎ положи файл photo.jpg рядом с index.html — фото появится само</p>
+          <p class="photo-hint"></p>
         </figure>
       </div>
     </div>
@@ -467,8 +467,8 @@ footer.colophon::before{content:"";display:block;height:5px;background:linear-gr
           <span class="c-ic red"><span data-ic="phone" data-s="20"></span></span>
           <div>
             <small>Телефон</small>
-            <a data-phone-link href="tel:+79991234567"><span data-phone-text>+7 999 123-45-67</span></a>
-            <p class="c-hint" id="phoneHint">✎ впиши свой номер в блоке CONFIG (внизу файла)</p>
+            <a data-phone-link href="tel:+79991234567"><span data-phone-text>+7 981 834-80-11</span></a>
+            <p class="c-hint" id="phoneHint"></p>
           </div>
         </div>
         <div class="c-card">
@@ -496,7 +496,7 @@ footer.colophon::before{content:"";display:block;height:5px;background:linear-gr
           <button type="submit" class="btn btn-solid"><span data-ic="send"></span>Отправить письмо</button>
           <div class="form-note" id="formNote" aria-live="polite"></div>
         </form>
-        <p class="form-small">Кнопка откроет готовое письмо в твоей почтовой программе — адрес Екатерины уже подставлен. Почты нет? Просто скопируй адрес слева.</p>
+        <p class="form-small"></p>
       </div>
     </div>
   </div>
@@ -508,10 +508,10 @@ footer.colophon::before{content:"";display:block;height:5px;background:linear-gr
     <p class="foot-state reveal">«Я веду, организую и <em>забочусь</em>.»</p>
     <div class="foot-grid">
       <div class="foot-id">
-        <p><b>Костромская Екатерина</b> · группа 8641к<br>личный сайт · эссе о себе<br>свёрстано вручную · <span class="yr">2026</span></p>
+        <p><b>Костромская Екатерина</b> · группа 8641к<br><br><span class="yr"></span></p>
       </div>
       <div class="foot-links">
-        <a class="foot-pill" data-phone-link href="tel:+79991234567"><span data-ic="phone" data-s="15"></span><span data-phone-text>+7 999 123-45-67</span></a>
+        <a class="foot-pill" data-phone-link href="tel:+79991234567"><span data-ic="phone" data-s="15"></span><span data-phone-text>+7 981 834-80-11</span></a>
         <a class="foot-pill" data-email-link href="mailto:kostromskayaekaterina@gmail.com"><span data-ic="mail" data-s="15"></span><span data-email-text>kostromskayaekaterina@gmail.com</span></a>
       </div>
       <div>
@@ -524,7 +524,7 @@ footer.colophon::before{content:"";display:block;height:5px;background:linear-gr
       </div>
     </div>
     <div class="foot-bottom">
-      <span>© <span class="yr">2026</span> Костромская Екатерина · учебное задание · один файл, готов к хостингу</span>
+      <span>© <span class="yr">2026</span> Костромская Екатерина</span>
       <a href="#home">Наверх <span data-ic="up" data-s="14"></span></a>
     </div>
   </div>
@@ -570,7 +570,6 @@ footer.colophon::before{content:"";display:block;height:5px;background:linear-gr
         <div id="qrBox" aria-label="QR-код"></div>
         <div id="qrFallback">
           <span data-ic="alert" data-s="22"></span>
-          Библиотека QR не загрузилась (нужна сеть). Ссылку можно скопировать, а код построить после повторной попытки.
           <br><button id="qrRetry">Повторить загрузку</button>
         </div>
       </div>
@@ -584,19 +583,19 @@ footer.colophon::before{content:"";display:block;height:5px;background:linear-gr
 </div>
 
 <div id="toasts" aria-live="polite"></div>
-<noscript><div style="position:fixed;left:0;right:0;bottom:0;background:#D64541;color:#fff;padding:14px;text-align:center;z-index:999;font-family:sans-serif">Включи JavaScript — иллюстрации, форма и QR работают на нём.</div></noscript>
+<noscript><div style="position:fixed;left:0;right:0;bottom:0;background:#D64541;color:#fff;padding:14px;text-align:center;z-index:999;font-family:sans-serif"></div></noscript>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
   onerror="var s=document.createElement('script');s.src='https://cdn.jsdelivr.net/npm/qrcodejs2@0.0.2/qrcode.min.js';document.head.appendChild(s);"></script>
 <script>
 'use strict';
 /* ═══════════════════════════════════════════════════════════════
-   CONFIG — ЕДИНСТВЕННОЕ МЕСТО, КОТОРОЕ НУЖНО ОТРЕДАКТИРОВАТЬ
+   CONFIG
    ═══════════════════════════════════════════════════════════════ */
 const CONFIG = {
   phoneTel:  '+79818348011',                      // номер для звонка (слитно, с +7)
   phoneShow: '+7 981 834-80-11',                  // как номер показывать на сайте
-  email:     'kostromskayaekaterina@gmail.com',   // почта Екатерины
+  email:     'kostromskayaekaterina@gmail.com',   // почта
   photo:     'photo.png'                          // имя файла фото рядом с index.html
 };
 const DEFAULT_TEL = '+79818348011';
@@ -826,7 +825,7 @@ $('#gallery').innerHTML=FACETS.map((f,i)=>`
   </span>
 </button>`).join('');
 
-/* ═══════════ ОБЪЁМ ЭССЕ (реальный подсчёт) ═══════════ */
+/* ═══════════ ОБЪЁМ ЭССЕ ═══════════ */
 {
   const txt=$('#essay').textContent.replace(/\s+/g,' ').trim();
   const chars=txt.length,words=txt.split(' ').length,mins=Math.max(1,Math.ceil(words/160));
