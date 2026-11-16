@@ -807,6 +807,17 @@ function timeSVG(){
   'Карманные часы показывают полдень, рядом список выполненных обещаний');
 }
 const FACETS=[
+const PHOTO_SLOTS=[
+  {src:'photo1.png',title:'Забота в мелочах',sub:'Люди, для которых хочется быть рядом',
+   quote:'Мне важно замечать чувства и состояние людей, быть рядом, когда им нужна поддержка, и откликаться на чужие трудности.'},
+  {src:'photo2.png',title:'Волонтёрство',sub:'С командой на проекте',
+   quote:'Волонтёрские проекты дали мне практику взаимодействия с разными людьми и умение находить к ним подход.'},
+  {src:'photo3.png',title:'Закулисье событий',sub:'Как всё устроено изнутри',
+   quote:'Я люблю узнавать «изнанку» крупных мероприятий: как всё устроено за кулисами, как работают команды, как решаются сложные задачи.'},
+  {src:'photo4.png',title:'Мои моменты',sub:'То, что меня заряжает',
+   quote:'Я одновременно энергична и внимательна к людям, любопытна к устройству больших вещей и готова помогать, даже когда это требует усилий.'}
+];
+const ART_FACETS=[
   {svg:careSVG,title:'Забота в мелочах',sub:'Сумка, в которой есть всё «на всякий случай» — для тех, кто рядом.',
    quote:'Я всегда ношу с собой много всего, чтобы если кому-то понадобилось могла помочь. Я всегда готова выслушать и поддержать.'},
   {svg:volunteerSVG,title:'Волонтёрство',sub:'Помогать людям, работать в команде, быть полезной.',
@@ -816,15 +827,36 @@ const FACETS=[
   {svg:timeSVG,title:'Пунктуальность',sub:'Обещано — сделано. Вовремя — значит с уважением.',
    quote:'Я пунктуальна, и для меня важно вовремя выполнять свои обещания и уважать время других людей.'}
 ];
-$('#gallery').innerHTML=FACETS.map((f,i)=>`
-<button class="postcard reveal" style="--d:${i*90}ms" data-facet="${i}" aria-label="Открыть иллюстрацию: ${f.title}">
-  ${f.svg()}
+let FACETS=[];
+function renderGallery(){
+  $('#gallery').innerHTML=FACETS.map((f,i)=>`
+<button class="postcard reveal" style="--d:${i*90}ms" data-facet="${i}" aria-label="Открыть: ${f.title}">
+  ${f.src
+    ?`<img src="${f.src}" alt="${f.title} — фото Екатерины" loading="lazy" decoding="async">`
+    :f.svg()}
   <span class="pc-cap">
-    <span class="ill">илл. ${i+1}</span>
+    <span class="ill">${f.src?'фото':'илл.'} ${i+1}</span>
     <h3>${f.title}</h3>
     <p>${f.sub}</p>
     <span class="pc-more">смотреть с цитатой ${icon('right',13)}</span>
   </span>
+</button>`).join('');
+  requestAnimationFrame(()=>requestAnimationFrame(()=>
+    $$('#gallery .reveal').forEach(el=>el.classList.add('in'))));
+}
+function photoExists(src){
+  return new Promise(res=>{
+    const im=new Image();
+    im.onload=()=>res(true);
+    im.onerror=()=>res(false);
+    im.src=src;
+  });
+}
+(async()=>{
+  const ok=await Promise.all(PHOTO_SLOTS.map(p=>photoExists(p.src)));
+  FACETS=PHOTO_SLOTS.map((p,i)=>ok[i]?p:ART_FACETS[i]);
+  renderGallery();
+})();
 </button>`).join('');
 
 /* ═══════════ ОБЪЁМ ЭССЕ ═══════════ */
