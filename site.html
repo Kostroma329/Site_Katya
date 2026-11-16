@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Костромская Екатерина — личный сайт · группа 8641к</title>
+<meta name="description" content="Личный сайт Костромской Екатерины, группа 8641к: эссе о себе, мои грани, контакты.">
+<meta name="theme-color" content="#F7F2E8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='64'%20height='64'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%23D64541'/%3E%3Ctext%20x='32'%20y='44'%20font-family='Georgia'%20font-size='36'%20font-weight='bold'%20fill='%23F7F2E8'%20text-anchor='middle'%3E%D0%95%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<!--
+  ══════════════════════════════════════════════════════════════
+  КАК ПОДГОТОВИТЬ САЙТ К СДАЧЕ (3 шага):
+  1. ФОТО: положи свой снимок рядом с этим файлом и назови его
+     photo.jpg — он появится в рамке сам (или укажи другое имя
+     в блоке CONFIG в начале <script> внизу).
+  2. ТЕЛЕФОН и СОЦСЕТИ: открой блок CONFIG внизу файла и впиши
+     свой номер и ссылки ВКонтакте / Telegram.
+  3. ПУБЛИКАЦИЯ: загрузи index.html + photo.jpg на Timeweb / Reg.ru
+     (папка сайта) или в бакет Yandex Cloud. Открой сайт по ссылке —
+     кнопка «QR-код сайта» в футере построит QR автоматически.
+  ══════════════════════════════════════════════════════════════
+-->
+<style>
+/* ═══════════ БУМАГА / ЧЕРНИЛА ═══════════ */
+:root{
+  --paper:#F7F2E8; --paper2:#EFE7D6; --card:#FFFDF6;
+  --ink:#221D15; --mut:#7A7160; --line:#D9CFBA;
+  --red:#D64541; --red-deep:#B23430; --teal:#1F6F6B; --gold:#C9A227; --blue:#3E5C76;
+  --fd:'Playfair Display',Georgia,serif;
+  --fs:'PT Serif',Georgia,serif;
+  --fu:'Manrope','Segoe UI',Roboto,sans-serif;
+  --nav-h:72px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+html.modal-lock{overflow:hidden}
+body{
+  font-family:var(--fs); background:var(--paper); color:var(--ink);
+  line-height:1.7; overflow-x:hidden;
+}
+::selection{background:var(--red);color:var(--paper)}
+:focus-visible{outline:2.5px solid var(--teal);outline-offset:3px;border-radius:4px}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+button{font-family:inherit;cursor:pointer}
+section{scroll-margin-top:calc(var(--nav-h) + 14px);position:relative}
+::-webkit-scrollbar{width:12px;height:12px}
+::-webkit-scrollbar-track{background:var(--paper2);border-left:1px solid var(--line)}
+::-webkit-scrollbar-thumb{background:var(--ink);border-radius:8px;border:3px solid var(--paper2)}
+::-webkit-scrollbar-thumb:hover{background:var(--red)}
+*{scrollbar-width:thin;scrollbar-color:var(--ink) var(--paper2)}
+.grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.05;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='160'%20height='160'%3E%3Cfilter%20id='n'%3E%3CfeTurbulence%20type='fractalNoise'%20baseFrequency='0.9'%20numOctaves='2'/%3E%3C/filter%3E%3Crect%20width='160'%20height='160'%20filter='url(%23n)'/%3E%3C/svg%3E")}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px;position:relative;z-index:2}
+.ic{flex:none}
+/* прогресс чтения — красная карандашная линия */
+#progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--red),var(--gold));z-index:140}
+/* ═══════════ НАВИГАЦИЯ ═══════════ */
+#nav{position:fixed;top:0;left:0;right:0;z-index:100;height:var(--nav-h);
+  background:rgba(247,242,232,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  border-bottom:1.5px solid var(--ink)}
+.nav-in{max-width:1140px;margin:0 auto;height:100%;padding:0 24px;display:flex;align-items:center;gap:16px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none}
+.brand-mark{width:38px;height:38px;border-radius:50%;background:var(--red);color:var(--paper);
+  display:grid;place-items:center;font-family:var(--fd);font-weight:700;font-size:15px;
+  box-shadow:2px 2px 0 var(--ink)}
+.brand b{font-family:var(--fu);font-weight:800;font-size:14px;line-height:1.2;display:block}
+.brand small{font-family:var(--fu);font-size:10.5px;color:var(--mut);letter-spacing:.08em}
+#navLinks{display:flex;gap:4px;margin-left:auto}
+#navLinks a{font-family:var(--fu);font-weight:600;font-size:14px;text-decoration:none;color:var(--ink);
+  padding:8px 13px;border-radius:8px;transition:.2s}
+#navLinks a:hover{background:var(--paper2)}
+#navLinks a.active{color:var(--red-deep);text-decoration:underline wavy var(--red) 1.5px;text-underline-offset:7px}
+#burger{display:none;width:40px;height:40px;border:1.5px solid var(--ink);border-radius:9px;background:var(--card);color:var(--ink);place-items:center}
+@media(max-width:820px){
+  #navLinks{position:fixed;top:var(--nav-h);left:0;right:0;flex-direction:column;background:var(--paper);
+    border-bottom:1.5px solid var(--ink);padding:12px 22px 18px;gap:2px;
+    transform:translateY(-12px);opacity:0;pointer-events:none;transition:.25s}
+  #nav.nav-open #navLinks{transform:none;opacity:1;pointer-events:auto}
+  #navLinks a{padding:12px 10px;font-size:16px}
+  #burger{display:grid}
+  .brand small{display:none}
+}
+/* ═══════════ ГЛАВНАЯ ═══════════ */
+#home{padding:calc(var(--nav-h) + 64px) 0 84px;overflow:hidden;
+  background:
+    radial-gradient(700px 420px at 100% 0%,rgba(201,162,39,.10),transparent 60%),
+    radial-gradient(600px 420px at 0% 100%,rgba(214,69,65,.06),transparent 60%)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+.overline{display:inline-flex;align-items:center;gap:10px;font-family:var(--fu);font-size:11px;font-weight:700;
+  letter-spacing:.22em;text-transform:uppercase;color:var(--red-deep)}
+.overline::before{content:"";width:28px;height:2px;background:var(--red)}
+#home h1{font-family:var(--fd);font-weight:900;font-size:clamp(38px,6.4vw,72px);line-height:1.08;margin:20px 0 8px;letter-spacing:-.01em}
+#home h1 .name{color:var(--red-deep);text-decoration:underline wavy var(--gold) 3px;text-underline-offset:12px}
+.hero-group{font-family:var(--fu);font-weight:700;font-size:14px;color:var(--mut);letter-spacing:.06em;margin-bottom:20px}
+.hero-lead{font-size:clamp(16px,1.8vw,19px);font-style:italic;color:var(--ink);max-width:540px;line-height:1.75}
+.hero-lead::before{content:"«";color:var(--red);font-family:var(--fd);font-weight:900}
+.hero-lead::after{content:"»";color:var(--red);font-family:var(--fd);font-weight:900}
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin:24px 0 6px}
+.chip{font-family:var(--fu);font-weight:700;font-size:12px;color:var(--teal);
+  border:1.5px solid var(--teal);border-radius:100px;padding:6px 14px;background:var(--card)}
+.hero-note{font-family:var(--fs);font-style:italic;font-size:13.5px;color:var(--mut);margin-bottom:26px}
+.hero-note b{color:var(--red-deep)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px}
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--fu);font-weight:800;font-size:14px;
+  text-decoration:none;border-radius:7px;padding:13px 24px;transition:.18s;border:1.5px solid var(--ink)}
+.btn-solid{background:var(--red);border-color:var(--red);color:var(--paper);box-shadow:3px 3px 0 var(--ink)}
+.btn-solid:hover{transform:translate(1px,1px);box-shadow:2px 2px 0 var(--ink);background:var(--red-deep)}
+.btn-line{background:var(--card);color:var(--ink);box-shadow:3px 3px 0 rgba(34,29,21,.18)}
+.btn-line:hover{transform:translate(1px,1px);box-shadow:2px 2px 0 rgba(34,29,21,.18);border-color:var(--red)}
+/* фото-рамка */
+.photo-side{position:relative;display:flex;justify-content:center}
+.photo-frame{position:relative;width:min(400px,100%);background:var(--card);border:1.5px solid var(--ink);
+  padding:14px 14px 12px;transform:rotate(2deg);box-shadow:0 22px 50px -18px rgba(34,29,21,.4);transition:transform .3s}
+.photo-frame:hover{transform:rotate(.5deg)}
+.photo-frame .ph{position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--paper2);border:1px solid var(--line)}
+.photo-img{display:none;width:100%;height:100%;object-fit:cover}
+.photo-frame.has-photo .photo-img{display:block}
+.photo-frame.has-photo .photo-fallback,.photo-frame.has-photo .photo-hint{display:none}
+.photo-fallback svg{width:100%;height:100%}
+.photo-frame figcaption{font-family:var(--fs);font-style:italic;font-size:14.5px;color:var(--mut);text-align:center;padding-top:11px}
+.photo-hint{font-family:var(--fu);font-size:11px;font-weight:600;color:var(--gold);text-align:center;padding-top:5px}
+.tape{position:absolute;width:92px;height:26px;background:rgba(201,162,39,.32);border:1px solid rgba(201,162,39,.5);z-index:3}
+.tape-l{top:-12px;left:-26px;transform:rotate(-38deg)}
+.tape-r{top:-10px;right:-26px;transform:rotate(36deg)}
+.stamp{position:absolute;top:-18px;right:-16px;z-index:4;transform:rotate(7deg);background:var(--paper);
+  border:2.5px solid var(--red);outline:1.5px dashed var(--red);outline-offset:3px;border-radius:6px;
+  padding:7px 13px;text-align:center;color:var(--red-deep)}
+.stamp small{display:block;font-family:var(--fu);font-weight:800;font-size:8.5px;letter-spacing:.24em}
+.stamp b{font-family:var(--fu);font-weight:800;font-size:16px;letter-spacing:.06em}
+/* дудлы на полях */
+.doodle{position:absolute;pointer-events:none;opacity:.6;z-index:1}
+.doodle svg{animation:bob 8s ease-in-out infinite alternate}
+@keyframes bob{to{transform:translateY(14px) rotate(8deg)}}
+/* ═══════════ ЗАГОЛОВКИ ГЛАВ ═══════════ */
+.chapter{padding:88px 0 26px}
+.ch-head{margin-bottom:40px;max-width:760px}
+.ch-head h2{font-family:var(--fd);font-weight:900;font-size:clamp(30px,4.4vw,48px);line-height:1.12;margin:14px 0 10px}
+.ch-head .lead{font-style:italic;color:var(--mut);font-size:17px}
+.ch-meta{display:inline-flex;align-items:center;gap:8px;margin-top:16px;font-family:var(--fu);font-weight:700;font-size:12px;
+  color:var(--gold);border:1.5px dashed var(--gold);border-radius:100px;padding:7px 15px;background:var(--card)}
+/* ═══════════ ЭССЕ ═══════════ */
+#about{background:radial-gradient(700px 400px at 0% 10%,rgba(31,111,107,.05),transparent 60%)}
+.essay{max-width:920px}
+.essay-block{display:grid;grid-template-columns:150px 1fr;gap:30px;margin-bottom:44px;align-items:start}
+.margin{position:sticky;top:calc(var(--nav-h) + 26px)}
+.margin .num{font-family:var(--fd);font-weight:900;font-size:42px;color:var(--red);line-height:1;opacity:.9}
+.margin .lbl{font-family:var(--fu);font-weight:800;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--mut);margin-top:8px;max-width:130px}
+.essay-text p{font-size:18.5px;line-height:1.85;margin-bottom:18px}
+.essay-text p:last-child{margin-bottom:0}
+.essay-intro p{font-size:20px}
+.essay-intro p::first-letter{font-family:var(--fd);font-weight:900;font-size:74px;float:left;line-height:.78;
+  padding:8px 14px 0 0;color:var(--red)}
+em.good{font-style:normal;font-weight:700;color:var(--teal);text-decoration:underline;text-decoration-color:var(--gold);
+  text-decoration-thickness:2px;text-underline-offset:5px}
+em.mark{font-style:normal;text-decoration:underline wavy var(--red) 1.5px;text-underline-offset:6px}
+.honest .essay-text{background:var(--paper2);border:1.5px dashed var(--red);border-radius:6px;padding:28px 30px}
+.honest .margin .num,.honest .margin .lbl{color:var(--red-deep)}
+.pullquote{max-width:680px;margin:60px auto 64px;text-align:center;position:relative;padding:0 30px}
+.pullquote .rule{width:64px;height:2px;background:var(--gold);margin:0 auto 22px}
+.pullquote p{font-family:var(--fd);font-style:italic;font-weight:700;font-size:clamp(22px,3vw,30px);line-height:1.4}
+.pullquote p::before{content:"«";color:var(--red);font-weight:900}
+.pullquote p::after{content:"»";color:var(--red);font-weight:900}
+.pullquote small{display:block;font-family:var(--fu);font-size:12px;color:var(--mut);margin-top:16px;letter-spacing:.08em}
+.pullquote .rule-b{width:64px;height:2px;background:var(--gold);margin:22px auto 0}
+@media(max-width:900px){
+  .essay-block{grid-template-columns:1fr;gap:12px;margin-bottom:36px}
+  .margin{position:static;display:flex;align-items:baseline;gap:12px}
+  .margin .num{font-size:30px}
+  .margin .lbl{margin-top:0;max-width:none}
+  .essay-text p{font-size:17px}
+  .honest .essay-text{padding:22px 20px}
+}
+/* ═══════════ ГАЛЕРЕЯ «МОИ ГРАНИ» ═══════════ */
+#facets{background:radial-gradient(700px 420px at 100% 20%,rgba(201,162,39,.08),transparent 60%)}
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:36px;max-width:980px}
+.postcard{background:var(--card);border:1.5px solid var(--ink);border-radius:8px;padding:14px 14px 18px;
+  box-shadow:0 14px 34px -14px rgba(34,29,21,.35);cursor:pointer;transition:transform .28s,box-shadow .28s;text-align:left}
+.postcard:nth-child(odd){transform:rotate(-1.1deg)}
+.postcard:nth-child(even){transform:rotate(1.1deg)}
+.postcard:hover,.postcard:focus-visible{transform:rotate(0) translateY(-7px);box-shadow:0 26px 50px -16px rgba(34,29,21,.45)}
+.postcard svg{width:100%;height:auto;border-radius:4px}
+.pc-cap{padding:14px 6px 0}
+.pc-cap .ill{font-family:var(--fd);font-style:italic;font-weight:700;font-size:14px;color:var(--gold)}
+.pc-cap h3{font-family:var(--fd);font-weight:700;font-size:21px;margin:3px 0 4px}
+.pc-cap p{font-style:italic;font-size:14.5px;color:var(--mut);line-height:1.55}
+.pc-more{display:inline-flex;align-items:center;gap:7px;font-family:var(--fu);font-weight:800;font-size:12px;
+  color:var(--red-deep);margin-top:11px;letter-spacing:.04em}
+.postcard:hover .pc-more{text-decoration:underline wavy var(--red) 1.5px;text-underline-offset:5px}
+@media(max-width:700px){.gallery{grid-template-columns:1fr;gap:26px}}
+/* ═══════════ КОНТАКТЫ ═══════════ */
+#contacts{background:radial-gradient(700px 420px at 0% 30%,rgba(214,69,65,.05),transparent 60%);padding-bottom:96px}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:start}
+.c-cards{display:grid;gap:16px}
+.c-card{display:flex;gap:16px;align-items:center;background:var(--card);border:1.5px solid var(--line);
+  border-radius:10px;padding:19px 20px;transition:.2s}
+.c-card:hover{border-color:var(--ink);transform:translateY(-2px)}
+.c-ic{flex:none;width:48px;height:48px;border-radius:50%;display:grid;place-items:center;color:var(--paper);
+  box-shadow:2px 2px 0 rgba(34,29,21,.25)}
+.c-ic.red{background:var(--red)}.c-ic.teal{background:var(--teal)}
+.c-card small{display:block;font-family:var(--fu);font-weight:800;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--mut)}
+.c-card a{font-family:var(--fs);font-weight:700;font-size:17.5px;text-decoration:none;word-break:break-all}
+.c-card a:hover{color:var(--red-deep);text-decoration:underline wavy var(--red) 1.5px;text-underline-offset:6px}
+.c-hint{font-family:var(--fu);font-size:11px;font-weight:600;color:var(--gold);margin-top:3px}
+.c-note{border:1.5px dashed var(--gold);border-radius:10px;padding:17px 20px;font-style:italic;font-size:15px;color:var(--mut);background:var(--card)}
+.c-note b{color:var(--teal);font-style:normal}
+/* форма на линованной бумаге */
+.form-card{position:relative;background:
+    repeating-linear-gradient(0deg,transparent 0 33px,rgba(34,29,21,.055) 33px 34px),var(--card);
+  border:1.5px solid var(--ink);border-radius:10px;padding:30px 30px 26px 46px;box-shadow:0 18px 44px -18px rgba(34,29,21,.35)}
+.form-card::before{content:"";position:absolute;left:32px;top:0;bottom:0;width:1.5px;background:rgba(214,69,65,.4)}
+.form-card h3{font-family:var(--fd);font-weight:700;font-size:24px;margin-bottom:4px}
+.form-card>p{font-style:italic;font-size:14px;color:var(--mut);margin-bottom:20px}
+.pv-form label{display:block;font-family:var(--fu);font-weight:800;font-size:11.5px;letter-spacing:.14em;
+  text-transform:uppercase;margin-bottom:16px}
+.pv-form input,.pv-form textarea{display:block;width:100%;margin-top:7px;font-family:var(--fs);font-size:16px;color:var(--ink);
+  background:var(--paper);border:1.5px solid var(--line);border-radius:6px;padding:12px 14px;transition:.2s;resize:vertical}
+.pv-form input::placeholder,.pv-form textarea::placeholder{color:var(--mut);opacity:.65;font-style:italic}
+.pv-form input:focus,.pv-form textarea:focus{outline:none;border-color:var(--red);box-shadow:0 0 0 3px rgba(214,69,65,.14)}
+.form-note{font-family:var(--fu);font-weight:600;font-size:13.5px;margin-top:13px;min-height:22px}
+.form-note.ok{color:var(--teal)}
+.form-note.err{color:var(--red-deep)}
+.form-small{font-family:var(--fu);font-size:11.5px;color:var(--mut);margin-top:12px}
+.shake{animation:shake .4s}
+@keyframes shake{20%{transform:translateX(-6px)}40%{transform:translateX(6px)}60%{transform:translateX(-4px)}80%{transform:translateX(4px)}}
+@media(max-width:900px){.contact-grid{grid-template-columns:1fr}.form-card{padding:26px 22px 24px 40px}.form-card::before{left:26px}}
+/* ═══════════ ФУТЕР-КОЛОФОН ═══════════ */
+footer.colophon{background:var(--ink);color:var(--paper);position:relative;z-index:2;margin-top:40px}
+footer.colophon::before{content:"";display:block;height:5px;background:linear-gradient(90deg,var(--red),var(--gold),var(--teal))}
+.foot-in{max-width:1140px;margin:0 auto;padding:56px 24px 28px}
+.foot-state{font-family:var(--fd);font-weight:700;font-size:clamp(24px,3.4vw,38px);line-height:1.25;max-width:640px}
+.foot-state em{font-style:italic;color:var(--gold)}
+.foot-grid{display:flex;flex-wrap:wrap;gap:30px;justify-content:space-between;align-items:flex-start;margin-top:36px}
+.foot-id p{font-family:var(--fu);font-size:13.5px;color:rgba(247,242,232,.75);line-height:1.8}
+.foot-id b{color:var(--paper)}
+.foot-links{display:flex;flex-direction:column;gap:10px}
+.foot-pill{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--fu);font-weight:600;font-size:13.5px;
+  color:var(--paper);border:1px solid rgba(247,242,232,.35);border-radius:100px;padding:10px 18px;transition:.2s;width:max-content;max-width:100%}
+.foot-pill:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px)}
+.foot-pill span{word-break:break-all}
+.foot-soc{display:flex;gap:11px;flex-wrap:wrap}
+.soc-btn{width:46px;height:46px;border-radius:11px;display:grid;place-items:center;text-decoration:none;
+  color:var(--paper);border:1px solid rgba(247,242,232,.35);transition:.2s;font-family:var(--fu);font-weight:800;font-size:14px}
+.soc-btn:hover{background:var(--red);border-color:var(--red);transform:translateY(-3px)}
+.qr-btn{display:inline-flex;align-items:center;gap:9px;margin-top:14px;background:transparent;color:var(--gold);
+  border:1.5px solid var(--gold);border-radius:11px;font-family:var(--fu);font-weight:800;font-size:13px;padding:11px 17px;transition:.2s}
+.qr-btn:hover{background:var(--gold);color:var(--ink);transform:translateY(-2px)}
+.foot-bottom{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center;
+  border-top:1px dashed rgba(247,242,232,.3);margin-top:34px;padding-top:20px;
+  font-family:var(--fu);font-size:12.5px;color:rgba(247,242,232,.6)}
+.foot-bottom a{color:var(--paper);text-decoration:none;display:inline-flex;gap:7px;align-items:center}
+.foot-bottom a:hover{color:var(--gold)}
+/* наверх */
+#toTop{position:fixed;right:22px;bottom:22px;z-index:90;width:48px;height:48px;border-radius:50%;
+  background:var(--card);border:1.5px solid var(--ink);color:var(--ink);display:grid;place-items:center;
+  box-shadow:3px 3px 0 rgba(34,29,21,.3);opacity:0;pointer-events:none;transform:translateY(12px);transition:.3s}
+#toTop.show{opacity:1;pointer-events:auto;transform:none}
+#toTop:hover{background:var(--red);color:var(--paper);border-color:var(--red)}
+/* ═══════════ МОДАЛЫ ═══════════ */
+.modal{position:fixed;inset:0;z-index:200;display:none}
+.modal.open{display:block}
+.m-backdrop{position:absolute;inset:0;background:rgba(34,29,21,.55);backdrop-filter:blur(3px);opacity:0;transition:.3s}
+.modal.show .m-backdrop{opacity:1}
+.m-center{position:relative;z-index:2;height:100%;display:grid;place-items:center;padding:20px;overflow-y:auto}
+.m-panel{background:var(--paper);border:2px solid var(--ink);border-radius:12px;width:min(780px,94vw);
+  padding:26px 28px;box-shadow:0 40px 90px rgba(0,0,0,.45);opacity:0;transform:scale(.96) translateY(12px);transition:.32s cubic-bezier(.22,1,.36,1)}
+.modal.show .m-panel{opacity:1;transform:none}
+.m-head{display:flex;align-items:center;gap:14px;margin-bottom:16px}
+.m-head .ill{font-family:var(--fd);font-style:italic;font-weight:700;font-size:16px;color:var(--gold)}
+.m-head h3{font-family:var(--fd);font-weight:700;font-size:22px;flex:1;min-width:0}
+.m-x{flex:none;width:40px;height:40px;border-radius:10px;border:1.5px solid var(--ink);background:var(--card);color:var(--ink);display:grid;place-items:center;transition:.2s}
+.m-x:hover{background:var(--red);color:var(--paper);border-color:var(--red)}
+.lb-art{background:var(--card);border:1.5px solid var(--line);border-radius:8px;padding:10px}
+.lb-art svg{width:100%;height:auto;max-height:52vh}
+.lb-quote{font-family:var(--fd);font-style:italic;font-weight:700;font-size:clamp(17px,2.4vw,21px);line-height:1.5;margin-top:18px}
+.lb-quote::before{content:"«";color:var(--red)}
+.lb-quote::after{content:"»";color:var(--red)}
+.lb-nav{display:flex;align-items:center;gap:14px;margin-top:18px}
+.lb-arrow{width:42px;height:42px;border-radius:50%;border:1.5px solid var(--ink);background:var(--card);color:var(--ink);display:grid;place-items:center;transition:.2s}
+.lb-arrow:hover{background:var(--ink);color:var(--paper)}
+.lb-count{font-family:var(--fu);font-weight:700;font-size:13px;color:var(--mut);letter-spacing:.1em}
+/* QR */
+.qr-panel{width:min(460px,94vw)}
+.qr-panel .sub{font-style:italic;font-size:14px;color:var(--mut);margin:-6px 0 16px}
+.qr-field{display:block;font-family:var(--fu);font-weight:800;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);margin-bottom:14px}
+.qr-field input{width:100%;margin-top:7px;font-family:var(--fu);font-size:14px;color:var(--ink);background:var(--card);
+  border:1.5px solid var(--line);border-radius:8px;padding:11px 13px;transition:.2s}
+.qr-field input:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px rgba(31,111,107,.14)}
+.qr-stage{display:grid;place-items:center;background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:16px;min-height:252px}
+#qrBox canvas{display:block;margin:0 auto}
+#qrBox img{display:none}
+#qrFallback{display:none;text-align:center;color:var(--mut);font-size:13.5px;padding:18px;font-family:var(--fu)}
+#qrFallback .ic{color:var(--gold);margin:0 auto 10px}
+#qrRetry{margin-top:12px;border:1.5px solid var(--ink);background:var(--card);border-radius:8px;padding:8px 15px;font-family:var(--fu);font-weight:700;font-size:12px}
+.qr-actions{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+.qr-actions .btn{padding:11px 17px;font-size:13px}
+.qr-note{font-family:var(--fu);font-size:11.5px;color:var(--mut);margin-top:12px}
+.qr-note.warn{color:var(--red-deep);font-weight:600}
+/* тосты */
+#toasts{position:fixed;top:calc(var(--nav-h) + 14px);right:18px;z-index:300;display:flex;flex-direction:column;gap:10px;max-width:min(340px,calc(100vw - 36px))}
+.toast{display:flex;gap:11px;align-items:flex-start;background:var(--card);border:1.5px solid var(--ink);border-left:4px solid var(--teal);
+  border-radius:10px;padding:13px 14px;font-family:var(--fu);font-size:13px;box-shadow:4px 4px 0 rgba(34,29,21,.25);
+  opacity:0;transform:translateX(24px);transition:.3s}
+.toast.show{opacity:1;transform:none}
+.toast.warn{border-left-color:var(--gold)}.toast.err{border-left-color:var(--red)}
+.toast .ic{color:var(--teal);margin-top:1px}
+.toast.warn .ic{color:var(--gold)}.toast.err .ic{color:var(--red)}
+.toast button{background:none;border:none;color:var(--mut);margin-left:auto;padding:2px}
+/* reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease var(--d,0ms),transform .7s cubic-bezier(.22,1,.36,1) var(--d,0ms)}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:960px){
+  .hero-grid{grid-template-columns:1fr;gap:52px}
+  .photo-side{order:-1}
+  .photo-frame{transform:rotate(1deg)}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .doodle svg{animation:none}
+  .reveal{opacity:1;transform:none;transition:none}
+  *{transition-duration:.01ms !important}
+}
+@media print{
+  #nav,#progress,#toTop,.doodle,.grain,.hero-cta,.qr-btn,.foot-soc,#toasts,.modal,.photo-hint,.c-hint,form{display:none !important}
+  body{background:#fff;color:#000}
+  .chapter{padding:24px 0}
+  footer.colophon{background:#fff;color:#000;border-top:2px solid #000}
+}
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<div id="progress" aria-hidden="true"></div>
+
+<!-- НАВИГАЦИЯ: 4 раздела -->
+<header id="nav">
+  <div class="nav-in">
+    <a class="brand" href="#home">
+      <span class="brand-mark">ЕК</span>
+      <span><b>Костромская Екатерина</b><small>личный сайт · группа 8641к</small></span>
+    </a>
+    <nav id="navLinks" aria-label="Разделы сайта">
+      <a href="#home">Главная</a>
+      <a href="#about">Обо мне</a>
+      <a href="#facets">Мои грани</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <button id="burger" aria-expanded="false" aria-label="Открыть меню"></button>
+  </div>
+</header>
+
+<!-- ГЛАВНАЯ -->
+<section id="home">
+  <div class="doodle" style="top:14%;left:4%" data-plx="0.12" aria-hidden="true"><span data-doodle="heart" data-c="#D64541" data-s="30"></span></div>
+  <div class="doodle" style="top:24%;right:6%" data-plx="0.07" aria-hidden="true"><span data-doodle="asterisk" data-c="#C9A227" data-s="34"></span></div>
+  <div class="doodle" style="bottom:12%;left:44%" data-plx="-0.06" aria-hidden="true"><span data-doodle="star" data-c="#1F6F6B" data-s="24"></span></div>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="overline reveal">личный сайт · эссе о себе · 2026</span>
+        <h1 class="reveal" style="--d:80ms">Я — <span class="name">Костромская Екатерина</span></h1>
+        <p class="hero-group reveal" style="--d:140ms">Группа 8641к</p>
+        <p class="hero-lead reveal" style="--d:200ms">Я одновременно энергична и внимательна к людям, любопытна к устройству больших вещей и готова помогать, даже когда это требует усилий.</p>
+        <div class="chips reveal" style="--d:260ms">
+          <span class="chip">пунктуальна</span>
+          <span class="chip">стрессоустойчива</span>
+          <span class="chip">эмпатична</span>
+          <span class="chip">отзывчива</span>
+        </div>
+        <p class="hero-note reveal" style="--d:300ms">…и честно — <b>о том, что требует работы над собой</b>. Всё ниже.</p>
+        <div class="hero-cta reveal" style="--d:340ms">
+          <a class="btn btn-solid" href="#about">Читать обо мне ↓</a>
+          <a class="btn btn-line" href="#contacts"><span data-ic="mail"></span>Написать мне</a>
+        </div>
+      </div>
+      <div class="photo-side reveal" style="--d:180ms">
+        <figure class="photo-frame" id="photoFrame">
+          <span class="tape tape-l" aria-hidden="true"></span>
+          <span class="tape tape-r" aria-hidden="true"></span>
+          <span class="stamp"><small>ГРУППА</small><b>8641к</b></span>
+          <div class="ph">
+            <img class="photo-img" id="myPhoto" alt="Костромская Екатерина — фото">
+            <div class="photo-fallback" id="photoFallback" aria-hidden="true"></div>
+          </div>
+          <figcaption>Екатерина · это я</figcaption>
+          <p class="photo-hint">✎ положи файл photo.jpg рядом с index.html — фото появится само</p>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ОБО МНЕ -->
+<section id="about" class="chapter">
+  <div class="wrap">
+    <div class="ch-head reveal">
+      <span class="overline">глава первая</span>
+      <h2>Обо мне</h2>
+      <p class="lead">Честный рассказ: о силе, о слабостях и о том, что делает меня мной.</p>
+      <span class="ch-meta" id="essayMeta">считаем объём…</span>
+    </div>
+    <div class="essay" id="essay">
+      <div class="essay-block essay-intro reveal">
+        <div class="margin"><span class="num">✳</span><span class="lbl">вступление</span></div>
+        <div class="essay-text">
+          <p>Добрый день. Хочу рассказать о своей уникальности — о том, что делает меня собой.</p>
+        </div>
+      </div>
+      <div class="essay-block reveal">
+        <div class="margin"><span class="num">01</span><span class="lbl">забота в мелочах</span></div>
+        <div class="essay-text">
+          <p>Я люблю заботиться о людях рядом со мной, и это проявляется в мелочах, которые многие, наверное, даже не замечают. Я всегда ношу с собой много всего, чтобы если кому-то понадобилось могла помочь. Я всегда готова выслушать и поддержать. Если мне важен человек, то буду интересоваться тем же, чем и он, погружаясь в его хобби.</p>
+        </div>
+      </div>
+      <div class="essay-block reveal">
+        <div class="margin"><span class="num">02</span><span class="lbl">на что можно опереться</span></div>
+        <div class="essay-text">
+          <p>Моя уникальность заключается в сочетании качеств, которые помогают мне идти вперёд и оставаться человеком, на которого можно положиться. Я <em class="good">пунктуальна</em>, и для меня важно вовремя выполнять свои обещания и уважать время других людей. Я <em class="good">стрессоустойчива</em>, поэтому даже в сложных ситуациях стараюсь сохранять спокойствие и не терять голову.</p>
+          <p>Я очень <em class="good">эмпатична</em> и <em class="good">отзывчива</em>: мне важно замечать чувства и состояние людей, быть рядом, когда им нужна поддержка, и откликаться на чужие трудности.</p>
+        </div>
+      </div>
+      <div class="essay-block reveal">
+        <div class="margin"><span class="num">03</span><span class="lbl">любопытство и волонтёрство</span></div>
+        <div class="essay-text">
+          <p>Мне интересно понимать устройство больших событий — я люблю узнавать «изнанку» крупных мероприятий: как всё устроено за кулисами, как работают команды, как решаются сложные задачи. Это любопытство подтолкнуло меня к волонтёрству: помогать людям, работать в команде, быть полезной. Волонтёрские проекты дали мне практику взаимодействия с разными людьми и умение находить к ним подход.</p>
+        </div>
+      </div>
+      <div class="essay-block honest reveal">
+        <div class="margin"><span class="num">04</span><span class="lbl">честные правки на полях</span></div>
+        <div class="essay-text">
+          <p>Но у меня есть и то, что требует работы над собой. Я могу быть <em class="mark">резкой и категоричной</em>: иногда мои фразы получаются короткими и без смягчения, я даю быстрые отрезвляющие оценки и не всегда добавляю объяснение или контекст. Это происходит не из злости, а чаще из желания сказать честно и сразу, но в результате люди могут воспринимать мои слова как слишком жёсткие или необдуманные.</p>
+          <p>Я <em class="mark">плохо воспринимаю критику</em> и могу отстраниться, когда мне сложно принять чужую точку зрения. Вместо того чтобы обдумать замечание и ответить, я закрываюсь, становлюсь молчаливой и дистанцируюсь — словно защищаюсь от дискомфорта. Такое поведение мешает диалогу и лишает меня шанса увидеть полезные стороны сказанного.</p>
+          <p>Ещё я замечаю, что бываю <em class="mark">ленивой</em> в делах, которые мне не нравятся: если задача не вызывает интереса, мне трудно найти мотивацию, я откладываю её или выполняю формально, без энтузиазма.</p>
+        </div>
+      </div>
+      <blockquote class="pullquote reveal">
+        <div class="rule"></div>
+        <p>Именно сочетание силы и уязвимости делает меня уникальной</p>
+        <small>— из финала этого эссе</small>
+        <div class="rule-b"></div>
+      </blockquote>
+      <div class="essay-block reveal">
+        <div class="margin"><span class="num">05</span><span class="lbl">сила и уязвимость</span></div>
+        <div class="essay-text">
+          <p>Моя уникальность в том, что я одновременно энергична и внимательна к людям, любопытна к устройству больших вещей и готова помогать, даже когда это требует усилий. Я веду, организую и забочусь — и при этом честно признаю свои слабости, чтобы становиться лучше. Именно сочетание силы и уязвимости делает меня уникальной, а стремление меняться — моим главным ресурсом.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- МОИ ГРАНИ (галерея) -->
+<section id="facets" class="chapter">
+  <div class="doodle" style="top:80px;right:5%" data-plx="0.08" aria-hidden="true"><span data-doodle="asterisk" data-c="#D64541" data-s="26"></span></div>
+  <div class="wrap">
+    <div class="ch-head reveal">
+      <span class="overline">глава вторая · иллюстрации</span>
+      <h2>Мои грани</h2>
+      <p class="lead">Четыре авторские иллюстрации — четыре грани из эссе выше. Нажми на открытку: у каждой есть своя цитата.</p>
+    </div>
+    <div class="gallery" id="gallery"></div>
+  </div>
+</section>
+
+<!-- КОНТАКТЫ -->
+<section id="contacts" class="chapter">
+  <div class="doodle" style="bottom:60px;left:3%" data-plx="-0.05" aria-hidden="true"><span data-doodle="heart" data-c="#C9A227" data-s="24"></span></div>
+  <div class="wrap">
+    <div class="ch-head reveal">
+      <span class="overline">глава третья</span>
+      <h2>Контакты</h2>
+      <p class="lead">Открыта к диалогу — пишу честно и отвечаю вовремя.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="c-cards reveal">
+        <div class="c-card">
+          <span class="c-ic red"><span data-ic="phone" data-s="20"></span></span>
+          <div>
+            <small>Телефон</small>
+            <a data-phone-link href="tel:+79991234567"><span data-phone-text>+7 999 123-45-67</span></a>
+            <p class="c-hint" id="phoneHint">✎ впиши свой номер в блоке CONFIG (внизу файла)</p>
+          </div>
+        </div>
+        <div class="c-card">
+          <span class="c-ic teal"><span data-ic="mail" data-s="20"></span></span>
+          <div>
+            <small>Почта</small>
+            <a data-email-link href="mailto:kostromskayaekaterina@gmail.com"><span data-email-text>kostromskayaekaterina@gmail.com</span></a>
+          </div>
+        </div>
+        <div class="c-note">«<b>Пунктуальность</b> работает и здесь: на письма отвечаю вовремя, а обещания выполняю в срок.»</div>
+      </div>
+      <div class="form-card reveal" style="--d:120ms">
+        <h3>Написать мне</h3>
+        <p>Пара строк — и письмо готово к отправке.</p>
+        <form class="pv-form" id="contactForm" novalidate>
+          <label for="f-name">Имя
+            <input id="f-name" name="name" type="text" placeholder="Как тебя зовут?" autocomplete="name">
+          </label>
+          <label for="f-email">Email
+            <input id="f-email" name="email" type="email" placeholder="you@example.ru" autocomplete="email">
+          </label>
+          <label for="f-msg">Сообщение
+            <textarea id="f-msg" name="message" rows="4" placeholder="О чём хочешь написать?"></textarea>
+          </label>
+          <button type="submit" class="btn btn-solid"><span data-ic="send"></span>Отправить письмо</button>
+          <div class="form-note" id="formNote" aria-live="polite"></div>
+        </form>
+        <p class="form-small">Кнопка откроет готовое письмо в твоей почтовой программе — адрес Екатерины уже подставлен. Почты нет? Просто скопируй адрес слева.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ФУТЕР -->
+<footer class="colophon">
+  <div class="foot-in">
+    <p class="foot-state reveal">«Я веду, организую и <em>забочусь</em>.»</p>
+    <div class="foot-grid">
+      <div class="foot-id">
+        <p><b>Костромская Екатерина</b> · группа 8641к<br>личный сайт · эссе о себе<br>свёрстано вручную · <span class="yr">2026</span></p>
+      </div>
+      <div class="foot-links">
+        <a class="foot-pill" data-phone-link href="tel:+79991234567"><span data-ic="phone" data-s="15"></span><span data-phone-text>+7 999 123-45-67</span></a>
+        <a class="foot-pill" data-email-link href="mailto:kostromskayaekaterina@gmail.com"><span data-ic="mail" data-s="15"></span><span data-email-text>kostromskayaekaterina@gmail.com</span></a>
+      </div>
+      <div>
+        <div class="foot-soc">
+          <a class="soc-btn" data-vk href="https://vk.com/" target="_blank" rel="noopener" aria-label="ВКонтакте">VK</a>
+          <a class="soc-btn" data-tg href="https://t.me/" target="_blank" rel="noopener" aria-label="Telegram"><span data-ic="send" data-s="19"></span></a>
+          <a class="soc-btn" data-email-link href="mailto:kostromskayaekaterina@gmail.com" aria-label="Написать на почту"><span data-ic="mail" data-s="19"></span></a>
+        </div>
+        <button class="qr-btn" id="qrOpen"><span data-ic="qr" data-s="17"></span>QR-код сайта</button>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span class="yr">2026</span> Костромская Екатерина · учебное задание · один файл, готов к хостингу</span>
+      <a href="#home">Наверх <span data-ic="up" data-s="14"></span></a>
+    </div>
+  </div>
+</footer>
+
+<button id="toTop" aria-label="Наверх"><span data-ic="up" data-s="20"></span></button>
+
+<!-- ЛАЙТБОКС ИЛЛЮСТРАЦИЙ -->
+<div class="modal" id="lightbox" role="dialog" aria-modal="true" aria-label="Иллюстрация с цитатой">
+  <div class="m-backdrop" data-close-lb></div>
+  <div class="m-center">
+    <div class="m-panel">
+      <div class="m-head">
+        <span class="ill" id="lbIll"></span>
+        <h3 id="lbTitle"></h3>
+        <button class="m-x" id="lbClose" aria-label="Закрыть"><span data-ic="x"></span></button>
+      </div>
+      <div class="lb-art" id="lbArt"></div>
+      <p class="lb-quote" id="lbQuote"></p>
+      <div class="lb-nav">
+        <button class="lb-arrow" id="lbPrev" aria-label="Предыдущая иллюстрация"><span data-ic="left"></span></button>
+        <span class="lb-count" id="lbCount"></span>
+        <button class="lb-arrow" id="lbNext" aria-label="Следующая иллюстрация"><span data-ic="right"></span></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- QR-МОДАЛ -->
+<div class="modal" id="qrModal" role="dialog" aria-modal="true" aria-label="QR-код сайта">
+  <div class="m-backdrop" data-close-qr></div>
+  <div class="m-center">
+    <div class="m-panel qr-panel">
+      <div class="m-head">
+        <h3>QR-код сайта</h3>
+        <button class="m-x" id="qrClose" aria-label="Закрыть"><span data-ic="x"></span></button>
+      </div>
+      <p class="sub" id="qrSub">Наведи камеру — и сайт откроется.</p>
+      <label class="qr-field">Адрес страницы
+        <input id="qrInput" type="url" spellcheck="false" autocomplete="off" placeholder="https://твой-сайт.timeweb.ru">
+      </label>
+      <div class="qr-stage">
+        <div id="qrBox" aria-label="QR-код"></div>
+        <div id="qrFallback">
+          <span data-ic="alert" data-s="22"></span>
+          Библиотека QR не загрузилась (нужна сеть). Ссылку можно скопировать, а код построить после повторной попытки.
+          <br><button id="qrRetry">Повторить загрузку</button>
+        </div>
+      </div>
+      <div class="qr-actions">
+        <button class="btn btn-solid" id="qrDownload"><span data-ic="download" data-s="15"></span>PNG 512px</button>
+        <button class="btn btn-line" id="qrCopy"><span data-ic="copy" data-s="15"></span>Копировать ссылку</button>
+      </div>
+      <p class="qr-note" id="qrNote">После публикации QR строится по адресу страницы автоматически. Для отчёта печатай код от 2×2 см.</p>
+    </div>
+  </div>
+</div>
+
+<div id="toasts" aria-live="polite"></div>
+<noscript><div style="position:fixed;left:0;right:0;bottom:0;background:#D64541;color:#fff;padding:14px;text-align:center;z-index:999;font-family:sans-serif">Включи JavaScript — иллюстрации, форма и QR работают на нём.</div></noscript>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+  onerror="var s=document.createElement('script');s.src='https://cdn.jsdelivr.net/npm/qrcodejs2@0.0.2/qrcode.min.js';document.head.appendChild(s);"></script>
+<script>
+'use strict';
+/* ═══════════════════════════════════════════════════════════════
+   CONFIG — ЕДИНСТВЕННОЕ МЕСТО, КОТОРОЕ НУЖНО ОТРЕДАКТИРОВАТЬ
+   ═══════════════════════════════════════════════════════════════ */
+const CONFIG = {
+  phoneTel:  '+79991234567',                      // ← ЗАМЕНИ: номер для звонка (слитно, с +7)
+  phoneShow: '+7 999 123-45-67',                  // ← ЗАМЕНИ: как номер показывать на сайте
+  email:     'kostromskayaekaterina@gmail.com',   // почта Екатерины
+  vk:        'https://vk.com/',                   // ← ЗАМЕНИ: ссылка на профиль ВКонтакте
+  tg:        'https://t.me/',                     // ← ЗАМЕНИ: ссылка на Telegram (например https://t.me/ник)
+  photo:     'photo.jpg'                          // имя файла фото рядом с index.html
+};
+const DEFAULT_TEL = '+79991234567';
+
+/* ═══════════ ХЕЛПЕРЫ ═══════════ */
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ═══════════ ИКОНКИ ═══════════ */
+const IC={
+  phone:'<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>',
+  mail:'<rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/>',
+  send:'<path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7z"/>',
+  up:'<line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/>',
+  x:'<line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>',
+  left:'<polyline points="15 18 9 12 15 6"/>',
+  right:'<polyline points="9 18 15 12 9 6"/>',
+  download:'<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>',
+  copy:'<rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>',
+  check:'<polyline points="20 6 9 17 4 12"/>',
+  alert:'<path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>',
+  qr:'<rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3z"/><path d="M20 14h1M14 20h1M18 18h3v3h-3z"/>',
+  burger:'<line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>'
+};
+const icon=(n,s=17)=>`<svg class="ic" width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${IC[n]}</svg>`;
+$$('[data-ic]').forEach(el=>{el.outerHTML=icon(el.dataset.ic,+el.dataset.s||17)});
+$('#burger').innerHTML=icon('burger',19);
+
+/* дудлы на полях */
+const DOODLE={
+  heart:(c,s)=>`<svg width="${s}" height="${s}" viewBox="0 0 20 18"><path d="M10 17 C4 12 0 8.6 0 5.3 C0 2.4 2.2 0 5 0 C7 0 9 1.2 10 3 C11 1.2 13 0 15 0 C17.8 0 20 2.4 20 5.3 C20 8.6 16 12 10 17 Z" fill="${c}"/></svg>`,
+  asterisk:(c,s)=>`<svg width="${s}" height="${s}" viewBox="0 0 24 24" stroke="${c}" stroke-width="2.6" stroke-linecap="round"><line x1="12" y1="2" x2="12" y2="22"/><line x1="3.3" y1="7" x2="20.7" y2="17"/><line x1="3.3" y1="17" x2="20.7" y2="7"/></svg>`,
+  star:(c,s)=>`<svg width="${s}" height="${s}" viewBox="0 0 24 24"><path d="M12 2l2.4 7.2L22 12l-7.6 2.8L12 22l-2.4-7.2L2 12l7.6-2.8z" fill="${c}"/></svg>`
+};
+$$('[data-doodle]').forEach(el=>{el.outerHTML=DOODLE[el.dataset.doodle](el.dataset.c,+el.dataset.s||26)});
+
+/* ═══════════ КОНТАКТЫ ИЗ CONFIG ═══════════ */
+$$('[data-phone-link]').forEach(a=>a.href='tel:'+CONFIG.phoneTel);
+$$('[data-phone-text]').forEach(el=>el.textContent=CONFIG.phoneShow);
+$$('[data-email-link]').forEach(a=>a.href='mailto:'+CONFIG.email);
+$$('[data-email-text]').forEach(el=>el.textContent=CONFIG.email);
+$$('[data-vk]').forEach(a=>a.href=CONFIG.vk);
+$$('[data-tg]').forEach(a=>a.href=CONFIG.tg);
+if(CONFIG.phoneTel!==DEFAULT_TEL)$('#phoneHint').style.display='none';
+
+/* ═══════════ ФОТО: photo.jpg ИЛИ ИЛЛЮСТРАЦИЯ ═══════════ */
+const P={paper:'#FFFDF6',paper2:'#EFE7D6',ink:'#221D15',mut:'#7A7160',red:'#D64541',teal:'#1F6F6B',gold:'#C9A227',blue:'#3E5C76',line:'#D9CFBA',skin:'#F2D9BC'};
+const HEART='M10 17 C4 12 0 8.6 0 5.3 C0 2.4 2.2 0 5 0 C7 0 9 1.2 10 3 C11 1.2 13 0 15 0 C17.8 0 20 2.4 20 5.3 C20 8.6 16 12 10 17 Z';
+function portraitSVG(){
+  return `<svg viewBox="0 0 400 500" role="img" aria-label="Иллюстрация-портрет Екатерины" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="500" fill="${P.paper2}"/>
+  <rect x="12" y="12" width="376" height="476" fill="none" stroke="${P.gold}" stroke-width="1.2" stroke-dasharray="6 5" opacity=".6"/>
+  <path d="M60 90l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" fill="${P.gold}"/>
+  <path d="M330 120l2.5 7 7 2.5-7 2.5-2.5 7-2.5-7-7-2.5 7-2.5z" fill="${P.red}" opacity=".8"/>
+  <path d="M320 330l2 6 6 2-6 2-2 6-2-6-6-2 6-2z" fill="${P.teal}" opacity=".8"/>
+  <path d="M80 470 Q80 384 200 374 Q320 384 320 470 Z" fill="${P.teal}" stroke="${P.ink}" stroke-width="2.5"/>
+  <path d="M138 390 L112 470 L136 470 L160 396 Z" fill="${P.gold}" stroke="${P.ink}" stroke-width="2"/>
+  <rect x="182" y="322" width="36" height="56" rx="12" fill="${P.skin}" stroke="${P.ink}" stroke-width="2"/>
+  <circle cx="200" cy="248" r="88" fill="${P.ink}"/>
+  <rect x="112" y="248" width="27" height="112" rx="13" fill="${P.ink}"/>
+  <rect x="261" y="248" width="27" height="112" rx="13" fill="${P.ink}"/>
+  <circle cx="200" cy="272" r="76" fill="${P.skin}" stroke="${P.ink}" stroke-width="2.5"/>
+  <path d="M124 262 Q136 196 200 190 Q264 196 276 262 Q240 220 200 222 Q160 220 124 262 Z" fill="${P.ink}"/>
+  <path d="M164 276 q10 9 20 0" fill="none" stroke="${P.ink}" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M216 276 q10 9 20 0" fill="none" stroke="${P.ink}" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M186 306 q14 11 28 0" fill="none" stroke="${P.ink}" stroke-width="2.6" stroke-linecap="round"/>
+  <circle cx="158" cy="294" r="8" fill="${P.red}" opacity=".25"/>
+  <circle cx="242" cy="294" r="8" fill="${P.red}" opacity=".25"/>
+  <g transform="translate(258 206)">
+    <circle cx="0" cy="-9" r="7" fill="${P.red}" stroke="${P.ink}" stroke-width="1.4"/>
+    <circle cx="9" cy="-2" r="7" fill="${P.red}" stroke="${P.ink}" stroke-width="1.4"/>
+    <circle cx="5" cy="9" r="7" fill="${P.red}" stroke="${P.ink}" stroke-width="1.4"/>
+    <circle cx="-5" cy="9" r="7" fill="${P.red}" stroke="${P.ink}" stroke-width="1.4"/>
+    <circle cx="-9" cy="-2" r="7" fill="${P.red}" stroke="${P.ink}" stroke-width="1.4"/>
+    <circle cx="0" cy="0" r="5" fill="${P.gold}" stroke="${P.ink}" stroke-width="1.4"/>
+  </g>
+  <path transform="translate(188 406) scale(1.25)" d="${HEART}" fill="${P.red}" stroke="${P.ink}" stroke-width="1.6"/>
+  <text x="200" y="486" font-family="'PT Serif',Georgia,serif" font-style="italic" font-size="12" fill="${P.mut}" text-anchor="middle">портрет · авторская иллюстрация</text>
+</svg>`;
+}
+{
+  const frame=$('#photoFrame'),img=$('#myPhoto');
+  $('#photoFallback').innerHTML=portraitSVG();
+  const ok=()=>frame.classList.add('has-photo');
+  img.addEventListener('load',ok);
+  img.src=CONFIG.photo;
+  if(img.complete&&img.naturalWidth>0)ok();
+}
+
+/* ═══════════ ИЛЛЮСТРАЦИИ «МОИ ГРАНИ» ═══════════ */
+function plate(n,inner,label){
+  return `<svg viewBox="0 0 400 300" role="img" aria-label="${label}" xmlns="http://www.w3.org/2000/svg">
+  <rect x="1.5" y="1.5" width="397" height="297" rx="6" fill="${P.paper}" stroke="${P.ink}" stroke-width="2"/>
+  <rect x="10" y="10" width="380" height="280" rx="4" fill="none" stroke="${P.gold}" stroke-width="1" stroke-dasharray="5 5" opacity=".55"/>
+  <text x="374" y="32" font-family="'Playfair Display',Georgia,serif" font-style="italic" font-weight="700" font-size="15" fill="${P.gold}" text-anchor="end">илл. ${n}</text>
+  ${inner}</svg>`;
+}
+function careSVG(){
+  return plate(1,`
+  <path d="M150 122 Q150 68 190 68 Q230 68 230 122" fill="none" stroke="${P.teal}" stroke-width="4"/>
+  <rect x="134" y="80" width="26" height="48" rx="6" fill="${P.teal}" stroke="${P.ink}" stroke-width="2"/>
+  <rect x="138" y="72" width="18" height="10" rx="3" fill="${P.gold}" stroke="${P.ink}" stroke-width="1.6"/>
+  <g transform="rotate(-12 201 97)">
+    <rect x="175" y="88" width="52" height="18" rx="9" fill="#EFC9A4" stroke="${P.ink}" stroke-width="2"/>
+    <circle cx="192" cy="97" r="1.6" fill="${P.ink}"/><circle cx="201" cy="97" r="1.6" fill="${P.ink}"/><circle cx="210" cy="97" r="1.6" fill="${P.ink}"/>
+  </g>
+  <rect x="232" y="82" width="34" height="46" rx="5" fill="${P.paper}" stroke="${P.ink}" stroke-width="2"/>
+  <path d="M251 90l-7 12h6l-5 12 12-15h-6l6-9z" fill="${P.gold}" stroke="${P.ink}" stroke-width="1.2"/>
+  <path d="M266 104 q26 -6 30 14" fill="none" stroke="${P.red}" stroke-width="2" stroke-dasharray="4 4"/>
+  <circle cx="300" cy="122" r="11" fill="${P.red}" stroke="${P.ink}" stroke-width="2"/>
+  <path d="M289 122l-9 -6v12z M311 122l9 -6v12z" fill="${P.red}" stroke="${P.ink}" stroke-width="1.6"/>
+  <path d="M120 122 L110 248 Q110 262 124 262 L256 262 Q270 262 270 248 L260 122 Z" fill="${P.paper2}" stroke="${P.ink}" stroke-width="2.5"/>
+  <path d="M148 122 Q148 76 190 76 Q232 76 232 122" fill="none" stroke="${P.ink}" stroke-width="3"/>
+  <rect x="150" y="168" width="82" height="42" rx="4" fill="${P.paper}" stroke="${P.ink}" stroke-width="1.6" stroke-dasharray="5 4"/>
+  <text x="191" y="186" font-family="'PT Serif',serif" font-style="italic" font-size="13" fill="${P.ink}" text-anchor="middle">на всякий</text>
+  <text x="191" y="202" font-family="'PT Serif',serif" font-style="italic" font-size="13" fill="${P.ink}" text-anchor="middle">случай</text>
+  <path transform="translate(318 168) scale(1.1)" d="${HEART}" fill="${P.red}"/>
+  <path transform="translate(74 160) scale(.85)" d="${HEART}" fill="none" stroke="${P.gold}" stroke-width="2"/>
+  <path transform="translate(330 214) scale(.7)" d="${HEART}" fill="${P.teal}"/>
+  <text x="200" y="286" font-family="'PT Serif',serif" font-style="italic" font-size="11.5" fill="${P.mut}" text-anchor="middle">забота — в мелочах, которые не замечают</text>`,
+  'Сумка со всем необходимым: термос, пластырь, зарядка, конфета');
+}
+function volunteerSVG(){
+  const cx=200,cy=138,r=92,cols=[P.teal,P.gold,P.red,P.teal,P.gold];
+  const people=[-90,-18,54,126,198].map((deg,i)=>{
+    const a=deg*Math.PI/180,x=cx+r*Math.cos(a),y=cy+r*Math.sin(a);
+    return `<circle cx="${x.toFixed(1)}" cy="${(y-9).toFixed(1)}" r="9" fill="${P.paper}" stroke="${P.ink}" stroke-width="2"/>
+    <path d="M${(x-14).toFixed(1)} ${(y+18).toFixed(1)} Q${x.toFixed(1)} ${(y-4).toFixed(1)} ${(x+14).toFixed(1)} ${(y+18).toFixed(1)} Z" fill="${cols[i]}" stroke="${P.ink}" stroke-width="2"/>`;
+  }).join('');
+  return plate(2,`
+  <circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="${P.teal}" stroke-width="1.6" stroke-dasharray="7 5" opacity=".7"/>
+  <path transform="translate(170 108) scale(3)" d="${HEART}" fill="${P.red}" stroke="${P.ink}" stroke-width="1"/>
+  ${people}
+  <path d="M92 60l2.5 7 7 2.5-7 2.5-2.5 7-2.5-7-7-2.5 7-2.5z" fill="${P.gold}"/>
+  <path d="M318 210l2 6 6 2-6 2-2 6-2-6-6-2 6-2z" fill="${P.gold}"/>
+  <rect x="142" y="248" width="116" height="28" rx="4" fill="${P.gold}" stroke="${P.ink}" stroke-width="2"/>
+  <text x="200" y="267" font-family="'Manrope',sans-serif" font-weight="800" font-size="12" letter-spacing="3" fill="${P.ink}" text-anchor="middle">ВОЛОНТЁР</text>`,
+  'Команда волонтёров вокруг сердца');
+}
+function backstageSVG(){
+  return plate(3,`
+  <line x1="20" y1="242" x2="380" y2="242" stroke="${P.ink}" stroke-width="2"/>
+  <polygon points="148,88 116,242 214,242" fill="${P.gold}" opacity=".28"/>
+  <g transform="rotate(16 150 76)">
+    <rect x="134" y="64" width="32" height="21" rx="4" fill="${P.ink}"/>
+    <line x1="150" y1="64" x2="150" y2="52" stroke="${P.ink}" stroke-width="3"/>
+  </g>
+  <line x1="74" y1="128" x2="74" y2="240" stroke="${P.ink}" stroke-width="2.5"/>
+  <line x1="100" y1="128" x2="100" y2="240" stroke="${P.ink}" stroke-width="2.5"/>
+  <line x1="74" y1="148" x2="100" y2="148" stroke="${P.ink}" stroke-width="2.5"/>
+  <line x1="74" y1="174" x2="100" y2="174" stroke="${P.ink}" stroke-width="2.5"/>
+  <line x1="74" y1="200" x2="100" y2="200" stroke="${P.ink}" stroke-width="2.5"/>
+  <line x1="74" y1="226" x2="100" y2="226" stroke="${P.ink}" stroke-width="2.5"/>
+  <rect x="250" y="122" width="88" height="112" rx="6" fill="${P.paper}" stroke="${P.ink}" stroke-width="2"/>
+  <rect x="277" y="114" width="34" height="14" rx="4" fill="${P.ink}"/>
+  <text x="294" y="148" font-family="'Manrope',sans-serif" font-weight="800" font-size="11" fill="${P.ink}" text-anchor="middle">команда</text>
+  <path d="M262 162l5 5 9-11" fill="none" stroke="${P.teal}" stroke-width="2.5" stroke-linecap="round"/>
+  <rect x="284" y="158" width="42" height="5" rx="2.5" fill="${P.mut}" opacity=".5"/>
+  <path d="M262 186l5 5 9-11" fill="none" stroke="${P.teal}" stroke-width="2.5" stroke-linecap="round"/>
+  <rect x="284" y="182" width="36" height="5" rx="2.5" fill="${P.mut}" opacity=".5"/>
+  <path d="M262 210l5 5 9-11" fill="none" stroke="${P.teal}" stroke-width="2.5" stroke-linecap="round"/>
+  <rect x="284" y="206" width="42" height="5" rx="2.5" fill="${P.mut}" opacity=".5"/>
+  <ellipse cx="190" cy="256" rx="26" ry="7" fill="none" stroke="${P.ink}" stroke-width="1.6" opacity=".5"/>
+  <ellipse cx="190" cy="256" rx="17" ry="4.5" fill="none" stroke="${P.ink}" stroke-width="1.6" opacity=".5"/>
+  <rect x="20" y="34" width="360" height="24" fill="${P.red}" stroke="${P.ink}" stroke-width="2"/>
+  <path d="M20 58 Q35 76 50 58 Q65 76 80 58 Q95 76 110 58 Q125 76 140 58 Q155 76 170 58 Q185 76 200 58 Q215 76 230 58 Q245 76 260 58 Q275 76 290 58 Q305 76 320 58 Q335 76 350 58 Q365 76 380 58 Z" fill="${P.red}" stroke="${P.ink}" stroke-width="2"/>
+  <path d="M20 58 C64 120 58 190 30 242 L20 242 Z" fill="${P.red}" stroke="${P.ink}" stroke-width="2"/>
+  <path d="M380 58 C336 120 342 190 370 242 L380 242 Z" fill="${P.red}" stroke="${P.ink}" stroke-width="2"/>
+  <text x="200" y="286" font-family="'PT Serif',serif" font-style="italic" font-size="11.5" fill="${P.mut}" text-anchor="middle">изнанка больших событий</text>`,
+  'Закулисье сцены: кулисы, софит, лестница и чек-лист команды');
+}
+function timeSVG(){
+  let ticks='';
+  for(let i=0;i<12;i++){
+    const a=i*Math.PI/6,maj=i%3===0,r1=maj?62:66,r2=72;
+    ticks+=`<line x1="${(170+r1*Math.sin(a)).toFixed(1)}" y1="${(150-r1*Math.cos(a)).toFixed(1)}" x2="${(170+r2*Math.sin(a)).toFixed(1)}" y2="${(150-r2*Math.cos(a)).toFixed(1)}" stroke="${P.ink}" stroke-width="${maj?3:1.5}" stroke-linecap="round"/>`;
+  }
+  return plate(4,`
+  <circle cx="170" cy="44" r="10" fill="none" stroke="${P.ink}" stroke-width="2.5"/>
+  <rect x="160" y="52" width="20" height="14" rx="3" fill="${P.gold}" stroke="${P.ink}" stroke-width="2"/>
+  <circle cx="170" cy="150" r="86" fill="${P.paper}" stroke="${P.ink}" stroke-width="3"/>
+  <circle cx="170" cy="150" r="76" fill="none" stroke="${P.gold}" stroke-width="1.5"/>
+  ${ticks}
+  <line x1="170" y1="150" x2="170" y2="98" stroke="${P.ink}" stroke-width="4" stroke-linecap="round"/>
+  <line x1="170" y1="150" x2="170" y2="86" stroke="${P.red}" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="170" cy="150" r="5" fill="${P.red}" stroke="${P.ink}" stroke-width="1.5"/>
+  <text x="170" y="196" font-family="'PT Serif',serif" font-style="italic" font-size="13" fill="${P.mut}" text-anchor="middle">ровно вовремя</text>
+  <g transform="rotate(3 322 170)">
+    <rect x="276" y="110" width="94" height="120" rx="6" fill="${P.paper2}" stroke="${P.ink}" stroke-width="2"/>
+    <text x="323" y="134" font-family="'Manrope',sans-serif" font-weight="800" font-size="11" fill="${P.ink}" text-anchor="middle">обещано</text>
+    <rect x="288" y="146" width="11" height="11" rx="2" fill="none" stroke="${P.ink}" stroke-width="1.8"/>
+    <path d="M289 151l3 3 6-7" fill="none" stroke="${P.teal}" stroke-width="2.2" stroke-linecap="round"/>
+    <rect x="306" y="149" width="50" height="4.5" rx="2" fill="${P.mut}" opacity=".5"/>
+    <rect x="288" y="168" width="11" height="11" rx="2" fill="none" stroke="${P.ink}" stroke-width="1.8"/>
+    <path d="M289 173l3 3 6-7" fill="none" stroke="${P.teal}" stroke-width="2.2" stroke-linecap="round"/>
+    <rect x="306" y="171" width="42" height="4.5" rx="2" fill="${P.mut}" opacity=".5"/>
+    <rect x="288" y="190" width="11" height="11" rx="2" fill="none" stroke="${P.ink}" stroke-width="1.8"/>
+    <path d="M289 195l3 3 6-7" fill="none" stroke="${P.teal}" stroke-width="2.2" stroke-linecap="round"/>
+    <rect x="306" y="193" width="46" height="4.5" rx="2" fill="${P.mut}" opacity=".5"/>
+    <g transform="rotate(-8 323 216)">
+      <rect x="288" y="207" width="70" height="18" rx="3" fill="none" stroke="${P.red}" stroke-width="1.6" stroke-dasharray="4 3"/>
+      <text x="323" y="220" font-family="'Manrope',sans-serif" font-weight="800" font-size="10.5" fill="${P.red}" text-anchor="middle">сделано ✓</text>
+    </g>
+  </g>
+  <path d="M292 76l2.5 7 7 2.5-7 2.5-2.5 7-2.5-7-7-2.5 7-2.5z" fill="${P.gold}"/>
+  <text x="200" y="286" font-family="'PT Serif',serif" font-style="italic" font-size="11.5" fill="${P.mut}" text-anchor="middle">уважать время других людей</text>`,
+  'Карманные часы показывают полдень, рядом список выполненных обещаний');
+}
+const FACETS=[
+  {svg:careSVG,title:'Забота в мелочах',sub:'Сумка, в которой есть всё «на всякий случай» — для тех, кто рядом.',
+   quote:'Я всегда ношу с собой много всего, чтобы если кому-то понадобилось могла помочь. Я всегда готова выслушать и поддержать.'},
+  {svg:volunteerSVG,title:'Волонтёрство',sub:'Помогать людям, работать в команде, быть полезной.',
+   quote:'Волонтёрские проекты дали мне практику взаимодействия с разными людьми и умение находить к ним подход.'},
+  {svg:backstageSVG,title:'Закулисье событий',sub:'Как устроена «изнанка» больших мероприятий.',
+   quote:'Я люблю узнавать «изнанку» крупных мероприятий: как всё устроено за кулисами, как работают команды, как решаются сложные задачи.'},
+  {svg:timeSVG,title:'Пунктуальность',sub:'Обещано — сделано. Вовремя — значит с уважением.',
+   quote:'Я пунктуальна, и для меня важно вовремя выполнять свои обещания и уважать время других людей.'}
+];
+$('#gallery').innerHTML=FACETS.map((f,i)=>`
+<button class="postcard reveal" style="--d:${i*90}ms" data-facet="${i}" aria-label="Открыть иллюстрацию: ${f.title}">
+  ${f.svg()}
+  <span class="pc-cap">
+    <span class="ill">илл. ${i+1}</span>
+    <h3>${f.title}</h3>
+    <p>${f.sub}</p>
+    <span class="pc-more">смотреть с цитатой ${icon('right',13)}</span>
+  </span>
+</button>`).join('');
+
+/* ═══════════ ОБЪЁМ ЭССЕ (реальный подсчёт) ═══════════ */
+{
+  const txt=$('#essay').textContent.replace(/\s+/g,' ').trim();
+  const chars=txt.length,words=txt.split(' ').length,mins=Math.max(1,Math.ceil(words/160));
+  $('#essayMeta').textContent=`≈ ${chars.toLocaleString('ru-RU')} знаков · ~${mins} мин чтения · всё честно`;
+}
+
+/* ═══════════ ТОСТЫ ═══════════ */
+function toast(msg,type='ok'){
+  const t=document.createElement('div');t.className='toast '+type;
+  t.innerHTML=`${icon(type==='ok'?'check':type==='err'?'x':'alert',15)}<span>${msg}</span><button aria-label="Закрыть уведомление">${icon('x',13)}</button>`;
+  t.querySelector('button').addEventListener('click',dismiss);
+  $('#toasts').appendChild(t);
+  requestAnimationFrame(()=>t.classList.add('show'));
+  const timer=setTimeout(dismiss,3600);
+  function dismiss(){clearTimeout(timer);t.classList.remove('show');setTimeout(()=>t.remove(),320);}
+}
+async function copyText(text){
+  try{await navigator.clipboard.writeText(text);return true}
+  catch(e){
+    try{const ta=document.createElement('textarea');ta.value=text;ta.style.cssText='position:fixed;opacity:0';
+      document.body.appendChild(ta);ta.select();const ok=document.execCommand('copy');ta.remove();return ok;}
+    catch(_){return false}
+  }
+}
+
+/* ═══════════ МОДАЛЫ: ОБЩЕЕ ═══════════ */
+let lastFocus=null;
+function showModal(m){
+  lastFocus=document.activeElement;
+  m.classList.add('open');document.documentElement.classList.add('modal-lock');
+  requestAnimationFrame(()=>m.classList.add('show'));
+}
+function hideModal(m){
+  m.classList.remove('show');document.documentElement.classList.remove('modal-lock');
+  setTimeout(()=>m.classList.remove('open'),320);
+  if(lastFocus&&lastFocus.isConnected)lastFocus.focus();
+}
+function trapTab(e,m){
+  const f=$$('button, a[href], input, textarea',m).filter(el=>el.offsetParent!==null);
+  if(!f.length)return;
+  const first=f[0],last=f[f.length-1];
+  if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+  else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+}
+
+/* ═══════════ ЛАЙТБОКС ═══════════ */
+const lb=$('#lightbox');let lbIndex=0;
+function lbRender(){
+  const f=FACETS[lbIndex];
+  $('#lbIll').textContent=`илл. ${lbIndex+1}`;
+  $('#lbTitle').textContent=f.title;
+  $('#lbArt').innerHTML=f.svg();
+  $('#lbQuote').textContent=f.quote;
+  $('#lbCount').textContent=`${lbIndex+1} / ${FACETS.length}`;
+}
+function lbOpen(i){lbIndex=i;lbRender();showModal(lb);$('#lbClose').focus();}
+function lbStep(d){lbIndex=(lbIndex+d+FACETS.length)%FACETS.length;lbRender();}
+$('#gallery').addEventListener('click',e=>{
+  const card=e.target.closest('[data-facet]');
+  if(card)lbOpen(+card.dataset.facet);
+});
+$('#lbClose').addEventListener('click',()=>hideModal(lb));
+$('[data-close-lb]').addEventListener('click',()=>hideModal(lb));
+$('#lbPrev').addEventListener('click',()=>lbStep(-1));
+$('#lbNext').addEventListener('click',()=>lbStep(1));
+
+/* ═══════════ ФОРМА → ПИСЬМО НА ПОЧТУ ═══════════ */
+const form=$('#contactForm'),note=$('#formNote');
+form.addEventListener('input',()=>{note.textContent='';note.className='form-note';});
+form.addEventListener('submit',e=>{
+  e.preventDefault();
+  const name=form.name.value.trim(),email=form.email.value.trim(),msg=form.message.value.trim();
+  const err=!name?'Представься, пожалуйста — поле «Имя» пустое.'
+    :!email.includes('@')?'В email должен быть символ @ — проверь адрес.'
+    :!msg?'Напиши пару строк в поле «Сообщение».':null;
+  if(err){
+    note.textContent='⚠ '+err;note.className='form-note err';
+    form.classList.remove('shake');void form.offsetWidth;form.classList.add('shake');
+    return;
+  }
+  const subject=encodeURIComponent(`Сообщение с сайта — от ${name}`);
+  const body=encodeURIComponent(`${msg}\n\n— ${name}\nОбратный адрес: ${email}`);
+  window.location.href=`mailto:${CONFIG.email}?subject=${subject}&body=${body}`;
+  note.textContent='✓ Письмо готово: почтовая программа открылась — осталось нажать «Отправить».';
+  note.className='form-note ok';
+  const btn=form.querySelector('button[type=submit]'),old=btn.innerHTML;
+  btn.disabled=true;btn.innerHTML='Письмо готово ✓';
+  setTimeout(()=>{if(btn.isConnected){btn.disabled=false;btn.innerHTML=old;}},2800);
+  form.reset();
+  toast('Готовое письмо открылось в почтовой программе.');
+});
+
+/* ═══════════ QR ═══════════ */
+const qrModal=$('#qrModal');let qrTries=0,qrTimer=null,qrStarted=false;
+function pageUrl(){
+  if(/^https?:$/.test(location.protocol))return location.origin+location.pathname;
+  return '';
+}
+function normUrl(){
+  let u=$('#qrInput').value.trim();
+  if(u&&!/^https?:\/\//i.test(u))u='https://'+u;
+  return u;
+}
+function renderQR(){
+  const u=normUrl(),box=$('#qrBox'),fb=$('#qrFallback'),noteEl=$('#qrNote');
+  if(!u){
+    box.innerHTML='';
+    noteEl.textContent='Сайт открыт локально. После загрузки на хостинг QR построится автоматически по адресу страницы — или впиши адрес вручную.';
+    noteEl.className='qr-note warn';
+    return;
+  }
+  noteEl.textContent='Наведи камеру телефона — откроется эта страница. Для отчёта печатай код от 2×2 см.';
+  noteEl.className='qr-note';
+  if(!window.QRCode)return;
+  fb.style.display='none';box.innerHTML='';
+  try{
+    new QRCode(box,{text:u,width:220,height:220,colorDark:'#221D15',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.M});
+  }catch(err){fb.style.display='block';}
+}
+function initQR(){
+  if(window.QRCode){$('#qrFallback').style.display='none';renderQR();}
+  else if(qrTries++<24){setTimeout(initQR,300);}
+  else{$('#qrFallback').style.display='block';}
+}
+$('#qrOpen').addEventListener('click',()=>{
+  if(!qrStarted){
+    qrStarted=true;
+    const u=pageUrl();
+    if(u)$('#qrInput').value=u;
+    $('#qrSub').textContent=u?'Адрес определился сам — просто скачай PNG.':'Впиши адрес сайта после публикации.';
+    initQR();
+  }
+  showModal(qrModal);$('#qrClose').focus();
+});
+$('#qrClose').addEventListener('click',()=>hideModal(qrModal));
+$('[data-close-qr]').addEventListener('click',()=>hideModal(qrModal));
+$('#qrInput').addEventListener('input',()=>{clearTimeout(qrTimer);qrTimer=setTimeout(renderQR,260);});
+$('#qrInput').addEventListener('change',()=>{const u=normUrl();if(u)$('#qrInput').value=u;});
+$('#qrRetry').addEventListener('click',()=>{
+  qrTries=0;
+  const s=document.createElement('script');
+  s.src='https://cdn.jsdelivr.net/npm/qrcodejs2@0.0.2/qrcode.min.js';
+  document.head.appendChild(s);initQR();
+});
+$('#qrDownload').addEventListener('click',()=>{
+  const u=normUrl();
+  if(!window.QRCode||!u){toast('QR не готов: проверь адрес и сеть.','warn');return;}
+  const tmp=document.createElement('div');tmp.style.cssText='position:fixed;left:-9999px;top:0';
+  document.body.appendChild(tmp);
+  new QRCode(tmp,{text:u,width:512,height:512,colorDark:'#221D15',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.M});
+  const cv=tmp.querySelector('canvas');
+  if(cv){
+    const a=document.createElement('a');a.href=cv.toDataURL('image/png');a.download='qr-sayt-ekaterina.png';a.click();
+    toast('QR 512×512 скачан — вставляй в отчёт.');
+  }else toast('Скачивание недоступно в этом браузере.','err');
+  tmp.remove();
+});
+$('#qrCopy').addEventListener('click',async()=>{
+  const u=normUrl();
+  if(!u){toast('Сначала впиши адрес сайта.','warn');return;}
+  (await copyText(u))?toast('Ссылка скопирована.'):toast('Не удалось скопировать.','err');
+});
+
+/* ═══════════ КЛАВИАТУРА ═══════════ */
+addEventListener('keydown',e=>{
+  const lbOn=lb.classList.contains('open'),qrOn=qrModal.classList.contains('open');
+  if(e.key==='Escape'){if(lbOn)hideModal(lb);else if(qrOn)hideModal(qrModal);return;}
+  if(lbOn){
+    if(e.key==='ArrowLeft')lbStep(-1);
+    if(e.key==='ArrowRight')lbStep(1);
+    if(e.key==='Tab')trapTab(e,lb);
+  }else if(qrOn&&e.key==='Tab')trapTab(e,qrModal);
+});
+
+/* ═══════════ НАВИГАЦИЯ / ПРОГРЕСС / НАВЕРХ ═══════════ */
+const burger=$('#burger');
+burger.addEventListener('click',()=>{
+  const on=$('#nav').classList.toggle('nav-open');
+  burger.setAttribute('aria-expanded',String(on));
+  burger.innerHTML=icon(on?'x':'burger',19);
+});
+$$('#navLinks a').forEach(a=>a.addEventListener('click',()=>{
+  $('#nav').classList.remove('nav-open');
+  burger.setAttribute('aria-expanded','false');
+  burger.innerHTML=icon('burger',19);
+}));
+{
+  const links=$$('#navLinks a'),map={};
+  links.forEach(a=>map[a.getAttribute('href').slice(1)]=a);
+  const io=new IntersectionObserver(es=>es.forEach(en=>{
+    if(en.isIntersecting){links.forEach(a=>a.classList.remove('active'));const a=map[en.target.id];if(a)a.classList.add('active');}
+  }),{rootMargin:'-40% 0px -55% 0px'});
+  ['home','about','facets','contacts'].forEach(id=>io.observe(document.getElementById(id)));
+}
+{
+  const bar=$('#progress'),top=$('#toTop');let raf=null;
+  const onScroll=()=>{
+    if(raf)return;
+    raf=requestAnimationFrame(()=>{
+      raf=null;
+      const h=document.documentElement,max=h.scrollHeight-innerHeight;
+      bar.style.width=(max>0?(scrollY/max)*100:0)+'%';
+      top.classList.toggle('show',scrollY>560);
+      if(!reduced)$$('[data-plx]').forEach(el=>el.style.transform=`translate3d(0,${scrollY*parseFloat(el.dataset.plx)}px,0)`);
+    });
+  };
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+  top.addEventListener('click',()=>scrollTo({top:0,behavior:reduced?'auto':'smooth'}));
+}
+
+/* ═══════════ REVEAL / ГОД ═══════════ */
+{
+  const io=new IntersectionObserver(es=>es.forEach(en=>{
+    if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}
+  }),{threshold:.12});
+  $$('.reveal').forEach(el=>io.observe(el));
+}
+$$('.yr').forEach(el=>el.textContent=new Date().getFullYear());
+</script>
+</body>
+</html>
