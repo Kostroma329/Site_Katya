@@ -359,7 +359,6 @@ footer.colophon::before{content:"";display:block;height:5px;background:linear-gr
           <span class="chip">эмпатична</span>
           <span class="chip">отзывчива</span>
         </div>
-        <p class="hero-note reveal" style="--d:300ms">…и честно — <b>о том, что требует работы над собой</b>. Всё ниже.</p>
         <div class="hero-cta reveal" style="--d:340ms">
           <a class="btn btn-solid" href="#about">Читать обо мне ↓</a>
           <a class="btn btn-line" href="#contacts"><span data-ic="mail"></span>Написать мне</a>
@@ -858,14 +857,6 @@ function photoExists(src){
   FACETS=PHOTO_SLOTS.map((p,i)=>ok[i]?p:ART_FACETS[i]);
   renderGallery();
 })();
-
-/* ═══════════ ОБЪЁМ ЭССЕ ═══════════ */
-{
-  const txt=$('#essay').textContent.replace(/\s+/g,' ').trim();
-  const chars=txt.length,words=txt.split(' ').length,mins=Math.max(1,Math.ceil(words/160));
-  $('#essayMeta').textContent=`≈ ${chars.toLocaleString('ru-RU')} знаков · ~${mins} мин чтения · всё честно`;
-}
-
 /* ═══════════ ТОСТЫ ═══════════ */
 function toast(msg,type='ok'){
   const t=document.createElement('div');t.className='toast '+type;
@@ -909,9 +900,11 @@ function trapTab(e,m){
 const lb=$('#lightbox');let lbIndex=0;
 function lbRender(){
   const f=FACETS[lbIndex];
-  $('#lbIll').textContent=`илл. ${lbIndex+1}`;
+  $('#lbIll').textContent=(f.src?'фото ':'илл. ')+(lbIndex+1);
   $('#lbTitle').textContent=f.title;
-  $('#lbArt').innerHTML=f.svg();
+  $('#lbArt').innerHTML=f.src
+    ?`<img src="${f.src}" alt="${f.title} — фото Екатерины" style="width:100%;max-height:52vh;object-fit:contain;border-radius:6px">`
+    :f.svg();
   $('#lbQuote').textContent=f.quote;
   $('#lbCount').textContent=`${lbIndex+1} / ${FACETS.length}`;
 }
