@@ -169,7 +169,9 @@ em.mark{font-style:normal;text-decoration:underline wavy var(--red) 1.5px;text-u
 .postcard:nth-child(odd){transform:rotate(-1.1deg)}
 .postcard:nth-child(even){transform:rotate(1.1deg)}
 .postcard:hover,.postcard:focus-visible{transform:rotate(0) translateY(-7px);box-shadow:0 26px 50px -16px rgba(34,29,21,.45)}
-.postcard svg{width:100%;height:auto;border-radius:4px}
+.postcard > svg,.postcard > img{width:100%;height:auto;border-radius:4px}
+.postcard > img{aspect-ratio:4/3;object-fit:cover;border:1px solid var(--line);background:var(--paper2)}
+.pc-more .ic{width:13px;height:13px;flex:none}
 .pc-cap{padding:14px 6px 0}
 .pc-cap .ill{font-family:var(--fd);font-style:italic;font-weight:700;font-size:14px;color:var(--gold)}
 .pc-cap h3{font-family:var(--fd);font-weight:700;font-size:21px;margin:3px 0 4px}
@@ -834,7 +836,7 @@ function renderGallery(){
     ?`<img src="${f.src}" alt="${f.title} — фото Екатерины" loading="lazy" decoding="async">`
     :f.svg()}
   <span class="pc-cap">
-    <span class="ill">${f.src?'фото':'илл.'} ${i+1}</span>
+    <span class="ill"></span>
     <h3>${f.title}</h3>
     <p>${f.sub}</p>
     <span class="pc-more">смотреть с цитатой ${icon('right',13)}</span>
